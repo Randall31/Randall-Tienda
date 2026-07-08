@@ -8,6 +8,9 @@ import java.util.Optional;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
@@ -79,5 +82,9 @@ public class ProductoService {
     @Transactional(readOnly = true)
     public List<Producto> consultaSQL(double precioInf, double precioSup) {
         return productoRepository.consultaSQL(precioInf, precioSup);
+    }
+
+    public List<Producto> buscarPorCategoria(String nombreCategoria) {
+        return productoRepository.findByCategoria_DescripcionContainingIgnoreCase(nombreCategoria);
     }
 }

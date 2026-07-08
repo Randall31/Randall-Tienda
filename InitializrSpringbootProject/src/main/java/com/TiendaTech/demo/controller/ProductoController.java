@@ -1,9 +1,9 @@
 package com.tiendaTech.demo.controller;
 
-
 import com.tiendaTech.demo.domain.Producto;
 import com.tiendaTech.demo.service.ProductoService;
 import jakarta.validation.Valid;
+import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 import org.springframework.context.MessageSource;
@@ -76,6 +76,13 @@ public class ProductoController {
         model.addAttribute("producto", productoOpt.get());
         return "/producto/modifica";
     }
-}
 
- 
+    //Practica 2
+    @GetMapping("/consultas/buscarCategoria")
+    public String buscarPorCategoria(@RequestParam String nombreCategoria, Model model) {
+        List<Producto> productos = productoService.buscarPorCategoria(nombreCategoria);
+        model.addAttribute("productos", productos);
+        model.addAttribute("nombreCategoria", nombreCategoria);
+        return "consultas/listado";  
+    }
+}
