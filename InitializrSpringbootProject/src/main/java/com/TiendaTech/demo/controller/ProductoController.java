@@ -83,6 +83,6 @@ public class ProductoController {
         List<Producto> productos = productoService.buscarPorCategoria(nombreCategoria);
         model.addAttribute("productos", productos);
         model.addAttribute("nombreCategoria", nombreCategoria);
-        return "consultas/listado";  
+        return "consultas/listado" ;  
     }
 }
