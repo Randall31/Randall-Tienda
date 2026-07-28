@@ -1,7 +1,7 @@
-package com.tiendaTech.demo.service;
+package com.TiendaTech.demo.service;
 
-import com.tiendaTech.demo.domain.Categoria;
-import com.tiendaTech.demo.repository.CategoriaRepository;
+import com.TiendaTech.demo.domain.Categoria;
+import com.TiendaTech.demo.repository.CategoriaRepository;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;

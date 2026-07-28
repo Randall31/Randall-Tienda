@@ -1,7 +1,7 @@
 package com.TiendaTech.demo.controller;
 
-import com.tiendaTech.demo.service.CategoriaService;
-import com.tiendaTech.demo.service.ProductoService;
+import com.TiendaTech.demo.service.CategoriaService;
+import com.TiendaTech.demo.service.ProductoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

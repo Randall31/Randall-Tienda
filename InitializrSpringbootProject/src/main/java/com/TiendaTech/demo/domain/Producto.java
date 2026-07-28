@@ -1,4 +1,4 @@
-package com.tiendaTech.demo.domain;
+package com.TiendaTech.demo.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
